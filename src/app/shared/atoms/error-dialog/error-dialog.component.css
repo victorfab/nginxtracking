@@ -1,0 +1,42 @@
+.error-dialog {
+  align-items: center;
+  background: var(--theme-color-background-03);
+  border-radius: 12px 12px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  left: 0;
+  min-height: 24.75rem;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.error-dialog__img {
+  max-width: 7.125rem;
+  margin-bottom: 3.5rem;
+}
+
+.error-dialog__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.error-dialog__description {
+  font-size: 1rem;
+  max-width: 15rem;
+  margin: 0 auto;
+}
+.modal__btn-cerrar {
+  background: var(--sn-color__clear);
+  border: none;
+  color: var(--sn-color__santander);
+  position: absolute;
+  right: 1.5rem;
+  top: 0.875rem;
+  cursor: pointer;
+}

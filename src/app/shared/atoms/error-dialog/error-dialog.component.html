@@ -1,0 +1,14 @@
+<div
+  [ngClass]="{
+    'error-dialog': true
+  }"
+  lu-animation
+  animation="downUp">
+  <img
+    class="error-dialog__img"
+    [src]="'./assets/icons/' + errorData.icon + '.svg'"
+    alt="" />
+  <span class="error-dialog__title">{{ errorData.title }}</span>
+  <p class="error-dialog__description">{{ errorData.message }}</p>
+  <button class="modal__btn-cerrar" (click)="close()">Cerrar.</button>
+</div>

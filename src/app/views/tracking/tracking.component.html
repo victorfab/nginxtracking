@@ -1,0 +1,22 @@
+<ng-container *ngIf="loaderResponse">
+  <sn-spinner></sn-spinner>
+</ng-container>
+<ng-container *ngIf="!loaderResponse">
+  <div class="header">
+    <div class="left" (click)="gotoRoot()">
+      <flame-icon fontIcon="chefron-left" size="m"></flame-icon>
+    </div>
+    <div class="title">Rastrea tu tarjeta</div>
+    <div class="right"></div>
+  </div>
+  <div class="content">
+    <p>Tiempo estimado de entrega 10 días hábiles</p>
+    <app-vertical-stepper [steps]="steps"></app-vertical-stepper>
+  </div>
+  <div class="content">
+    <h4>¿Tienes dudas?</h4>
+    <p>
+      Si tienes dudas sobre el envío, puedes comunicarte al <a>55 51694300.</a>
+    </p>
+  </div>
+</ng-container>

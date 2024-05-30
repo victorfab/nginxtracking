@@ -1,0 +1,61 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  background-color: var(--sn-color__concrete);
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    .title {
+      color: var(--theme-light-text-text-01, #191919);
+      font-family: 'SantanderHeadline', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 125%; /* 30px */
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--sn-color__santander);
+    }
+  }
+  .content {
+    background-color: var(--sn-color__clear);
+    border-radius: 10px;
+    margin: 16px;
+    p {
+      font-size: 14px;
+      margin: 14px 20px 30px;
+      color: #000000;
+      font-weight: 400;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: var(--sn-color__santander);
+        font-weight: 400;
+      }
+    }
+    &:last-child {
+      margin-top: 0;
+      h4 {
+        margin: 30px 30px 16px;
+        font-weight: bold;
+        color: #000000;
+      }
+      p {
+        margin: 0 30px 30px;
+      }
+    }
+  }
+}

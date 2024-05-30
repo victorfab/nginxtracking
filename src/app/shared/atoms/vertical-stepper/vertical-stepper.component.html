@@ -1,0 +1,47 @@
+<div class="stepper">
+  <div *ngFor="let step of steps" class="step">
+    <div class="step-icon">
+      <div *ngIf="step.status == 'PENDING'" class="not-icon"></div>
+      <div
+        *ngIf="
+          step.status == 'IN_PROGRESS' ||
+          step.status == 'SUCCESS' ||
+          step.status == 'CANCEL'
+        "
+        class="with-icon"
+        [ngClass]="{
+          'step-success': step.status == 'SUCCESS',
+          'step-cancel': step.status == 'CANCEL'
+        }">
+        <flame-icon
+          [fontIcon]="step.icon"
+          [ngClass]="{
+            'success-icon': step.status == 'SUCCESS',
+            'cancel-icon': step.status == 'CANCEL'
+          }"></flame-icon>
+      </div>
+    </div>
+    <div
+      class="step-content"
+      [ngClass]="{
+        'in-progress': step.status == 'IN_PROGRESS',
+        pending: step.status == 'PENDING',
+        success: step.status == 'SUCCESS',
+        'step-cancel': step.status == 'CANCEL'
+      }">
+      <div class="center_v">
+        <h3>{{ step.title }}</h3>
+        <p
+          *ngIf="step.branchName"
+          [innerHTML]="step.branchName"
+          class="branchName">
+          {{ step.branchName }}
+        </p>
+        <p *ngIf="step.deliveryDate">
+          el {{ step.deliveryDate | date: 'd/MMM/yy' }}
+        </p>
+        <p *ngIf="step.description" class="description">{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
